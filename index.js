@@ -1,5 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generateLogo = require('./lib/shapes.js');
 
 const userInput = [
     {
@@ -25,22 +26,17 @@ const userInput = [
     }
 ];
 
-/*
 function writeToFile(fileName, data) {
-    fs.appendFile(fileName, generateLogo(data), (error, data) =>
+    fs.appendFile(fileName, generateLogo(data), (error) =>
   error ? console.error(error) : console.log("Success!")
 )};
-*/
 
 function init() {
     inquirer.prompt(
         userInput
         )
-        /*
         .then((data) => 
-        writeToFile('./logo.svg', data));
-        */
+        writeToFile('./examples/logo.svg', data));
 }
 
 init()
-module.exports = userInput;
