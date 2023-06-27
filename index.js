@@ -40,3 +40,5 @@ function init() {
 }
 
 init()
+
+module.exports = userInput;
