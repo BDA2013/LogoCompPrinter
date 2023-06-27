@@ -27,8 +27,8 @@ const userInput = [
 ];
 
 function writeToFile(fileName, data) {
-    fs.appendFile(fileName, generateLogo(data), (error) =>
-  error ? console.error(error) : console.log("Success!")
+    fs.writeFile(fileName, generateLogo(data), (error) =>
+  error ? console.error(error) : console.log("Success")
 )};
 
 function init() {
