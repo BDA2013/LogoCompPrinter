@@ -41,4 +41,4 @@ function init() {
 
 init()
 
-module.exports = userInput;
+module.exports = init;
