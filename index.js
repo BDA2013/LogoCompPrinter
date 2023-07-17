@@ -17,7 +17,7 @@ const userInput = [
         type: 'list',
         message: 'What shape is your logo',
         name: 'shape',
-        choices: ['circle', 'triangle', 'square']
+        choices: ['Circle', 'Triangle', 'Square']
     },
     {
         type: 'input',
@@ -28,15 +28,14 @@ const userInput = [
 
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, generateLogo(data), (error) =>
-  error ? console.error(error) : console.log("Success")
+  error ? console.error(error) : console.log("Success!")
 )};
 
 function init() {
     inquirer.prompt(
         userInput
         )
-        .then((data) => 
-        writeToFile('./examples/logo.svg', data));
+        .then ((data) => writeToFile('./examples/logo.svg', data));
 }
 
 init()
