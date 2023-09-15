@@ -35,7 +35,13 @@ function init() {
     inquirer.prompt(
         userInput
         )
-        .then ((logoData) => writeToFile('./examples/logo.svg', logoData))
+        .then ((logoData) => {
+            if (logoData.text.length > 3) {
+                console.error("Please enter only three characters");
+                return;
+            } else
+            writeToFile('./examples/logo.svg', logoData)
+        })
         .catch((error) => console.error(error));
 }
 
