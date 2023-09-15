@@ -6,7 +6,7 @@ const userInput = [
     {
         type: 'input',
         message: 'What three characters you want on your logo?',
-        name: 'characters',
+        name: 'text',
     },
     {
         type: 'input',
@@ -35,7 +35,8 @@ function init() {
     inquirer.prompt(
         userInput
         )
-        .then ((data) => writeToFile('./examples/logo.svg', data));
+        .then ((logoData) => writeToFile('./examples/logo.svg', logoData))
+        .catch((error) => console.error(error));
 }
 
 init()
