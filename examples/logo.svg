@@ -1,9 +1,7 @@
 <svg version="1.1"
           width="300" height="200"
-          xmlns="http://www.w3.org/2000/svg">
-
-          <circle cx="25" cy="75" r="20" fill="red" stroke-width="5"/> 
-        
-          <text x="10" y="10" color=white>BDA</text>
-
+          xmlns="http://www.w3.org/2000/svg"><polygon points="150, 18 244, 182 56, 182" fill="red" /> 
+         
+          <text x="122" y="120" font-size="30" color=white>BDA</text>
+          
           </svg>
