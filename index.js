@@ -28,7 +28,7 @@ const userInput = [
 
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, generateLogo(data), (error) =>
-  error ? console.error(error) : console.log("Success!")
+  error ? console.error(error) : console.log("Generated logo.svg")
 )};
 
 function init() {
